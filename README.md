@@ -8,6 +8,7 @@ Currently supported:
 
 - Apache
 - Nginx
+- LigHTTPd
 - Pagodabox Boxfile with PHP 5.4
 
 Thanks!
