@@ -23,6 +23,9 @@ web1:
     - mcrypt
     - gd
     - eaccelerator
+  # after_build: uncomment this you need composer
+    # - "curl -s https://getcomposer.org/installer | php"
+    # - "php composer.phar install"
   before_deploy:
     - "php artisan migrate:install"
     - "php artisan migrate"
