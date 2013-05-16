@@ -8,5 +8,6 @@ Currently supported:
 
 - Apache
 - Nginx
+- Pagodabox Boxfile with PHP 5.4
 
 Thanks!

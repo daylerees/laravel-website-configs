@@ -1,0 +1,34 @@
+global:
+  
+web1:
+  php_upload_max_filesize: "20M"
+  php_post_max_size: "20M"
+  name: laravelapp
+  shared_writable_dirs:
+    - /storage/cache
+    - /storage/database
+    - /storage/logs
+    - /storage/sessions
+    - /storage/views
+    - /storage/work
+    # - /public/uploads uncomment this if users store uploads
+  document_root: /public
+  php_version: 5.4.14
+  php_extensions:
+    - curl
+    - memcached
+    - imagick
+    - mbstring
+    - pdo_mysql
+    - mcrypt
+    - gd
+    - eaccelerator
+  before_deploy:
+    - "php artisan migrate:install"
+    - "php artisan migrate"
+  after_deploy:
+    - "rm -f storage/cache/*"
+    - "rm -f storage/views/*"
+db1:
+  name: laravelapp            
+  type: mysql
