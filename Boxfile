@@ -22,7 +22,6 @@ web1:
     - pdo_mysql
     - mcrypt
     - gd
-    - eaccelerator
   # after_build: uncomment this you need composer
     # - "curl -s https://getcomposer.org/installer | php"
     # - "php composer.phar install"
